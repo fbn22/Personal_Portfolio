@@ -38,6 +38,19 @@ section {
     padding: 0px 30px 30px 30px;
 }
 
+ul {
+    list-style: none;
+    display: flex;
+}
+
+li {
+    color: var(--interactive);
+}
+
+li:hover {
+    color: var(--interactive-dark);
+}
+
 /* Rounded border */
 .divider {
     margin: -40px 0 30px 0;
@@ -146,7 +159,6 @@ button {
     line-height: 20px;
     min-height: 50px;
     min-width: 100px;
-    margin-top: 30px;
     overflow: hidden;
     padding: 0px 20px;
     text-align: center;
@@ -189,6 +201,10 @@ button:focus {
     vertical-align: middle;
 }
 
+.scroll-down a {
+    color: var(--white);
+}
+
 /* NAVBAR */
 .navbar {
     display: flex;
@@ -211,6 +227,10 @@ button:focus {
 .left-navbar img {
     width: 100%;
     margin: 0 35px;
+}
+
+.button-18 {
+    margin-right: 240px;
 }
 
 /* HOME SECTION */
@@ -343,17 +363,6 @@ button:focus {
     cursor: context-menu;
 }
 
-
-.services .serv-content .card:hover .box {
-    transform: scale(1.07);
-    box-shadow: var(--interactive) 0px 2px 40px,
-        var(--interactive) 0px 5px 12px;
-    animation: slide-in-down 1400ms;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .services .serv-content .card .box .blob {
     display: flex;
     justify-content: center;
@@ -423,11 +432,8 @@ button:focus {
 .skills-container {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-}
-
-.skills-content-mobile {
-    display: none;
 }
 
 .skills-content .text {
@@ -437,26 +443,12 @@ button:focus {
     font-size: 1.1rem;
     color: var(--white);
     font-weight: 600;
+    padding: 10px;
 }
 
-.skills-content-mobile .text {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-size: 1.1rem;
-    color: var(--white);
-    font-weight: 600;
-}
 
-.left .skills-container .skill-card {
-    width: 20%;
-    display: block;
-    margin: 1%;
-    border-radius: 5px;
-}
-
-.right .skills-container .skill-card {
-    width: 15%;
+.skill-card {
+    width: 160px;
     display: block;
     margin: 1%;
     border-radius: 5px;
@@ -553,15 +545,20 @@ button:focus {
 }
 
 .projects .card-2 {
-    background-image: url(/images/cilis-dt.jpeg);
+    background-image: url(/images/travel-dt-rev.jpg);
     justify-content: flex-end;
 }
 
 .projects .card-3 {
-    background-image: url(/images/travel-dt.jpeg);
+    background-image: url(/images/larp.jpeg);
 }
 
 .projects .card-4 {
+    background-image: url(/images/cilis-dt.jpeg);
+    justify-content: flex-end;
+}
+
+.projects .card-5 {
     background-image: url(/images/brand-dt.jpg);
 }
 
@@ -570,6 +567,13 @@ button:focus {
     align-items: flex-end;
     text-align: right;
 }
+
+.projects .card-4 .card-textcontent {
+    align-items: flex-end;
+    text-align: right;
+}
+
+
 
 .projects .card .card-textcontent {
     display: flex;
@@ -606,6 +610,34 @@ button:focus {
     width: 100%;
 }
 
+.project-buttons {
+    display: flex;
+}
+
+.live-link {
+    display: flex;
+    align-items: center;
+}
+
+.live-link button {
+    min-width: 150px;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 56px;
+}
+
+.github-link a {
+    color: var(--interactive);
+}
+
+.github-link a:hover {
+    color: var(--interactive-dark);
+}
+
 
 
 
@@ -627,6 +659,12 @@ button:focus {
     display: flex;
     justify-content: flex-start;
     padding: 0 30px;
+}
+
+.contact .contact-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .contact .contact-content h3 {
@@ -694,6 +732,22 @@ button:focus {
     height: 430px;
 }
 
+.some {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.some li {
+    font-size: 45px;
+    padding: 15px;
+}
+
+.button-area {
+    display: flex;
+    justify-content: center;
+}
 
 
 
@@ -723,9 +777,25 @@ button:focus {
 
 /*Media Query */
 @media (min-width: 1600px) {
+    button {
+        min-width: 100%;
+        min-height: 80px;
+        margin-right: 200px;
+    }
+
+    .right-navbar {
+        width: 50%;
+    }
 
     section .title {
         font-size: 4.5rem;
+    }
+
+    .skill-card {
+        width: 220px;
+        display: block;
+        margin: 1%;
+        border-radius: 5px;
     }
 
     .home-text-bracket img {
@@ -849,6 +919,10 @@ button:focus {
         max-width: 80%;
     }
 
+    .some li {
+        font-size: 65px;
+    }
+
 }
 
 @media (max-width: 1000px) {
@@ -857,24 +931,13 @@ button:focus {
         width: 350px;
     }
 
-    .skills-content .column {
-        display: none;
-    }
-
-    .skills-content-mobile {
-        display: block;
-    }
-
-    .left .skills-container .skill-card {
-        width: 30%;
-    }
-
-    .right .skills-container .skill-card {
-        width: 25%;
-    }
 }
 
 @media (max-width: 800px) {
+    section {
+        padding: 0px 20px 20px 20px;
+    }
+
     hr.rounded {
         width: 40%;
     }
@@ -932,8 +995,15 @@ button:focus {
 
     }
 
-
     .about .about-content .column {
+        width: 100%;
+    }
+
+    .about .about-content {
+        padding-bottom: 0;
+    }
+
+    .about .about-content .column p {
         width: 100%;
     }
 
@@ -942,6 +1012,7 @@ button:focus {
         justify-content: center;
         margin: 0 auto 60px;
     }
+
 
 
     .services .serv-content {
@@ -979,8 +1050,6 @@ button:focus {
         background: var(--bcg);
     }
 
-
-
     .process .process-container {
         display: none;
     }
@@ -1013,26 +1082,48 @@ button:focus {
 
     .process .process-container-mobile .container-mobile .process-card {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         width: 100%;
+        justify-content: flex-end;
+        align-items: center;
     }
 
     .process .process-container-mobile .container-mobile .process-card img {
-        padding: 30px;
+        padding: 10px;
         margin: 0;
-        width: 50%;
+        width: 40%;
     }
 
     .process .process-container-mobile .container-mobile .process-card h3 {
-        padding: 10px;
+        padding: 0 0 20px 0;
         margin: 0;
         width: 100%;
         font-size: 1.7rem;
+        display: flex;
+        justify-content: center;
     }
 
 }
 
 @media (max-width: 620px) {
+
+    .navbar button {
+        min-width: 100%;
+        margin-right: 200px;
+    }
+
+    .right-navbar {
+        width: 50%;
+    }
+
+    section {
+        padding: 0px 15px 15px 15px;
+    }
+
+
+    .scroll-down {
+        padding: 10px;
+    }
 
     .projects .title {
         font-size: 2rem;
@@ -1064,6 +1155,10 @@ button:focus {
         display: none;
     }
 
+    .projects .card-5 {
+        display: none;
+    }
+
     .projects {
         background: var(--bcg);
     }
@@ -1082,7 +1177,7 @@ button:focus {
 
     .projects .card-mobile h2 {
         color: var(--white);
-        font-size: 2.5em;
+        font-size: 2.2em;
         padding-bottom: 10px;
     }
 
@@ -1122,6 +1217,10 @@ button:focus {
 }
 
 @media (max-width: 500px) {
+    section {
+        padding: 0px 10px 10px 10px;
+    }
+
     hr.rounded {
         width: 70%;
     }
@@ -1149,6 +1248,11 @@ button:focus {
     .about .about-content .right .text,
     .skills .skills-content .left .text {
         font-size: 19px;
+    }
+
+    .skill-card {
+        width: 120px;
+        margin: 10px;
     }
 
     .skill-text-container {
