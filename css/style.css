@@ -1181,6 +1181,10 @@ button:focus {
         padding-bottom: 10px;
     }
 
+    .projects .card-mobile .project-buttons {
+        margin-top: -50px;
+    }
+
     .services .card {
         width: 100%;
     }
