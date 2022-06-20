@@ -550,15 +550,19 @@ button:focus {
 }
 
 .projects .card-3 {
-    background-image: url(/images/larp.jpeg);
+    background-image: url(/https://res.cloudinary.com/efer/image/upload/v1652114335/imac-angle-3_cyjvgg.jpg);
 }
 
 .projects .card-4 {
     background-image: url(/images/cilis-dt.jpeg);
     justify-content: flex-end;
 }
-
 .projects .card-5 {
+    background-image: url(/images/larp.jpeg);
+}
+
+
+.projects .card-6 {
     background-image: url(/images/brand-dt.jpg);
 }
 
